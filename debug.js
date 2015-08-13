@@ -72,8 +72,8 @@ function debug(namespace) {
     var self = enabled;
 
     // set `diff` timestamp
-    var curr = +new Date();
-    var ms = curr - (prevTime || curr);
+    var curr = process.hrtime();
+    var ms = process.hrtime(prevTime || curr);
     self.diff = ms;
     self.prev = prevTime;
     self.curr = curr;

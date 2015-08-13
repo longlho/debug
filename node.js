@@ -90,7 +90,7 @@ function formatArgs() {
     args[0] = '  \u001b[3' + c + ';1m' + name + ' '
       + '\u001b[0m'
       + args[0] + '\u001b[3' + c + 'm'
-      + ' +' + exports.humanize(this.diff) + '\u001b[0m';
+      + ' +' + exports.humanize(this.diff[0] * 1e3 + this.diff[1]/1e6) + '\u001b[0m';
   } else {
     args[0] = new Date().toUTCString()
       + ' ' + name + ' ' + args[0];
